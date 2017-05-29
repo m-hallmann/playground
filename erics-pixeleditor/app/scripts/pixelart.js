@@ -2,7 +2,8 @@
  * Created by eric.kretzschmar on 07.05.17.
  */
 
-$(".alert").hide();
+$(".alert1").hide();
+$(".alert2").hide();
 
 $(".pixel > div").on("click",function(){
   var val;
@@ -98,14 +99,14 @@ $(".import--btn").on("click",function(){
 
   if(!$.isNumeric(s) || (/[2-9]/i).test(s))
   {
-    $(".alert").show();
+    $(".alert1").show();
     setTimeout(function() {
-      $(".alert").fadeOut("slow");
+      $(".alert1").fadeOut("slow");
     }, 3000); // <-- time in milliseconds
    return;
   }
 
-  if(s.length>0)
+  if(s.length>0 && s.length<=25)
   {
     $(".canvas--small .pixel > input[name=pixel]").each(function( index ) {
       console.log(typeof (s[index]));
@@ -120,7 +121,10 @@ $(".import--btn").on("click",function(){
     });
   }
   else{
-
+    $(".alert2").show();
+    setTimeout(function() {
+      $(".alert2").fadeOut("slow");
+    }, 3000); // <-- time in milliseconds
   }
 
   /*$(".canvas--small .pixel > input[name=pixel]").each(function( index ) {
