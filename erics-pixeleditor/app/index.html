@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Art</title>
+
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+
+</head>
+<body>
+<div class="container">
+  <h1>Your Art Counts</h1>
+
+
+<!--
+  <div class="row color-selection">
+    <div class="col-xs-4 col-md-2 colors-w">
+      <input type="radio" checked="checked" value="w" name="color">
+    </div>
+    <div class="col-xs-4 col-md-2 colors-r">
+      <input type="radio" value="r" name="color">
+    </div>
+    <div class="col-xs-4 col-md-2 colors-g">
+      <input type="radio" value="g" name="color">
+    </div>
+    <div class="col-xs-4 col-md-2 colors-b">
+      <input type="radio" value="b" name="color">
+    </div>
+    <div class="col-xs-4 col-md-2 colors-bl">
+      <input type="radio" value="bl" name="color">
+    </div>
+    <div class="col-xs-4 col-md-2 colors-gr">
+      <input type="radio" value="gr" name="color">
+    </div>
+    <div class="col-xs-4 col-md-2 colors-ay">
+      <input type="radio" value="ay" name="color">
+    </div>
+  </div>
+-->
+  <h2>The canvas</h2>
+
+  <div class="row">
+    <div class="alert alert-info fade in">
+      <!--<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>-->
+      <strong>Info!</strong> Pleas only use 0 and 1 to build your pixelart.
+    </div>
+
+    <!--<label>Input String</label>-->
+    <div class="col-xs-12 col-md-2">
+      <input class="import--txt" type="text" placeholder="Input Text">
+    </div>
+    <div class="col-xs-12 col-md-10">
+      <button class="btn btn-primary import--btn">Import</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- big -->
+    <!--<div class="col-xs-offset-1 col-xs-11 col-md-offset-0 col-md-6">
+      <div class="canvas">
+        <div class="row no-gutters">
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-1 pixel">
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>-->
+
+    <!-- the good one-->
+    <!-- small -->
+    <!--
+    <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-6">
+      <div class="canvas canvas--small">
+        <div class="row no-gutters">
+          <div class="col-xs-2 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-2 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-2 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-2 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-2 pixel">
+            <div></div>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-xs-2 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-2 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-2 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-2 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-2 pixel">
+            <div></div>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-xs-2 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-2 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-2 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-2 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-2 pixel">
+            <div></div>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-xs-2 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-2 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-2 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-2 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-2 pixel">
+            <div></div>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-xs-2 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-2 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-2 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-2 pixel">
+            <div></div>
+          </div>
+          <div class="col-xs-2 pixel">
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary btn--export">Export</button>
+    </div>-->
+
+
+    <div class="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-6">
+      <div class="canvas canvas--small">
+        <div class="row no-gutters">
+          <div class="col-xs-2 pixel">
+            <input class="" type="checkbox" name="pixel">
+          </div>
+          <div class="col-xs-2 pixel">
+            <input type="checkbox" name="pixel">
+          </div>
+          <div class="col-xs-2 pixel">
+            <input type="checkbox" name="pixel">
+          </div>
+          <div class="col-xs-2 pixel">
+            <input type="checkbox" name="pixel">
+          </div>
+          <div class="col-xs-2 pixel">
+            <input type="checkbox" name="pixel">
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-xs-2 pixel">
+            <input type="checkbox" name="pixel">
+          </div>
+          <div class="col-xs-2 pixel">
+            <input type="checkbox" name="pixel">
+          </div>
+          <div class="col-xs-2 pixel">
+            <input type="checkbox" name="pixel">
+          </div>
+          <div class="col-xs-2 pixel">
+            <input type="checkbox" name="pixel">
+          </div>
+          <div class="col-xs-2 pixel">
+            <input type="checkbox" name="pixel">
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-xs-2 pixel">
+            <input type="checkbox" name="pixel">
+          </div>
+          <div class="col-xs-2 pixel">
+            <input type="checkbox" name="pixel">
+          </div>
+          <div class="col-xs-2 pixel">
+            <input type="checkbox" name="pixel">
+          </div>
+          <div class="col-xs-2 pixel">
+            <input type="checkbox" name="pixel">
+          </div>
+          <div class="col-xs-2 pixel">
+            <input type="checkbox" name="pixel">
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-xs-2 pixel">
+            <input type="checkbox" name="pixel">
+          </div>
+          <div class="col-xs-2 pixel">
+            <input type="checkbox" name="pixel">
+          </div>
+          <div class="col-xs-2 pixel">
+            <input type="checkbox" name="pixel">
+          </div>
+          <div class="col-xs-2 pixel">
+            <input type="checkbox" name="pixel">
+          </div>
+          <div class="col-xs-2 pixel">
+            <input type="checkbox" name="pixel">
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-xs-2 pixel">
+            <input type="checkbox" name="pixel">
+          </div>
+          <div class="col-xs-2 pixel">
+            <input type="checkbox" name="pixel">
+          </div>
+          <div class="col-xs-2 pixel">
+            <input type="checkbox" name="pixel">
+          </div>
+          <div class="col-xs-2 pixel">
+            <input type="checkbox" name="pixel">
+          </div>
+          <div class="col-xs-2 pixel">
+            <input type="checkbox" name="pixel">
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary btn--exportt">Export</button>
+
+  </div>
+
+
+
+    <!--<div class="realCanvas">
+      </div>-->
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/plugins.js -->
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/pixelart.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

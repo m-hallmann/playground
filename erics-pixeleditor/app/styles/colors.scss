@@ -1,0 +1,20 @@
+
+$w:   #fff;
+$bl:  #000;
+$o:   transparent;
+$gr:  #f0effc;
+$ay:  #FE9E39;
+$r:   #ff0000;
+$g:   #00ff00;
+$b:   #0000ff;
+
+.colors{
+  &-w{background-color: $w }
+  &-bl{background-color: $bl}
+  &-o{background-color: $o}
+  &-gr{background-color: $gr}
+  &-ay{background-color: $ay}
+  &-r{background-color: $r}
+  &-g{background-color: $g}
+  &-b{background-color: $b}
+}

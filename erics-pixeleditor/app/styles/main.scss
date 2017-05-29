@@ -1,0 +1,24 @@
+$icon-font-path: '../fonts/';
+$canvas-size: 15;
+
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "art.scss";
+@import "pixelart.scss";
+@import "colors";
+
+body{
+  background-image: url("../images/GT_Gradient_Yellow_RGB_rev_Digital.svg");
+  background-position: top right;
+  background-size: 250px;
+  background-color: #eeeeee;
+}
+
+/*.art-area {
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+  grid-gap: 20px;
+  width: 70vw;
+  height: 80vh;
+  margin: 0 auto;
+  max-width: 800px;
+}*/
