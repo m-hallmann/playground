@@ -1,0 +1,118 @@
+Modern Web Fundamentals
+  Introduction
+  HTML/CSS/JS/DOM Elevator Pitch
+
+HTML5
+  Lesson 1: Markup
+    HTML, Hypertext Markup Language is a notation standard used for websites.
+
+    ## Engineer Vannevar Bush wrote "As We May Think" in 1945 in which he described the Memex, a theoretical proto-hypertext device which in turn helped inspire the subsequent invention of hypertext.
+       Hypertext is text displayed on a computer display or other electronic devices with references (hyperlinks) to other text that the reader can immediately access, or where text can be revealed progressively at multiple levels of detail. (WIKIPEDIA)
+       https://en.wikipedia.org/wiki/Hypertext
+
+    ## A markup language is a system for annotating a document in a way that is syntactically distinguishable from the text. The idea and terminology evolved from the "marking up" of paper manuscripts, i.e., the revision instructions by editors, traditionally written with a blue pencil on authors' manuscripts.
+       https://en.wikipedia.org/wiki/Markup_language
+
+    HTML combines both concepts, linked documents and annotated text. This is the fundamental of all websites as the exist today.
+
+    What Do We Need This For?
+      Markup makes a document - to an extent - machine readable. A program can determine if a document contains certain annotations or a specific structure without interpreting the actual text. This way, machines can interpret and qualify content on an abstract level, without understanding its meaning.
+      This has several important applications:
+        - Search engines can deliver the requested content based on markup interpretation, not content, and do so quite successfully.
+        - Content can be rendered to fit the environment, machine, system and application it is displayed on. This can make the same document or data readable on an incredible vast array of devices, from a wristwatch to a cellphone, a tablet, a laptop, a large home computer, smart tv or billboard.
+        - Content described by markup can be accessible by devices that display it in a completely custom way, making it accessible to users with vision, hearing, movement impairments.
+
+    HTML Markup
+      HTMl marks up the document with tags, set expressions inside < > lower-than and greater-than symbols. (This means you can NOT use < or > in HTML to express a mathmatical relationship, i.e. 5 > 1. You have to use a glyph, &gt; or &lt;)
+      A HTML mark is called a TAG, and always consists of at least three parts: <, a name, and >.
+      There are two kinds of tags:
+        Placeholder tags, which consist of a single tag that is replaced by something it describes.
+        Framing tags, which consist of an opening and closing tag <..> and </..>, that qualify and describe the content between opening and closing tag.
+
+      Examples:
+        <body> </body>
+        <header> </header>
+        <div> </div>
+        <h1> </h1>
+        <p> </p>
+        <i> /i>
+        <a> </a>
+        <img>
+
+    HTML Hyperlinks
+      A hyperlink connects two documents, leading from the one that displays the hyperlink to the one that is referenced in the hyperlink.
+      Hyperlinks are displayed using the <a> tag. The reference to the target document is notated as a parameter of the <a> tag, href="":
+      <a href="target.html"> </a>
+      The <a> tag wraps content that is displayed as a hyperlink and reacts to the mouse. By clicking on the content of an <a> tag, the user loads the HTMl page contained in the href attribute.
+
+    The HTML5 Document
+      HTML Documents are text files, formatted ANSI or ASCII, and can be edited by every base text editor such as Notepad, or a vast variety of code editors and IDEs.
+      Examples:
+        - Atom
+        - Sublime
+        - Textmate
+        - Coda
+        - Notepad++
+        - Brackets
+        - ...
+
+      Document Structure
+      Every HTML5 Document is split in three parts: Doctype Declaration, Header, Body.
+      Doctype declaration instructs the browser to interpret the markup as a specific version of HTML. This course only teaches HTML5. Note that there are substantial differences between HTML versions.
+      The header contains the non-visible part of the website document, such as machine readable short descriptions of the content, references to external documents that are required to properly render the document, and instructions for search engines.
+      The body contains the visible part of the website, the user-readable content.
+
+      { HTML5 DOC EXAMPLE }
+
+  Lesson 2: Semantics
+    HTML5 contains 97 different tags with further differentiation through parameters. Many tags render exactly the same, meaning the visible result is soften the same, no matter which tag is used to wrap a piece of content. This led to people excessively using a specific tag because "it did not matter". But it does.
+
+    Semantically correct markup means that for every piece of content, for every content structure there's the right, meaningful tag to use, making the content and its structure machine readable.
+    Why is this so important?
+      - 
+
+  Lesson 3: Attributes
+
+CSS3
+  Identifying a Single Node
+  Identifying an Array of Nodes
+  Pseudo-Locators
+  Preprocessors
+    SCSS
+    LESS
+JS
+  Lesson 1: Variables, Conditions and Loops
+  Lesson 1: DOM Node Manipulation
+  Lesson 2: Event Handling
+  Lesson 3: DOM Node Creation
+  ECMAscript ES6
+
+Frameworks, Libraries
+  FrontEnd
+    Bootstrap
+    Foundation
+    Material
+    Patternlab
+  JS
+    jQuery
+    MV*
+      Angular
+      ReactJS
+
+Spec Driven Design
+  What's a Spec?
+  Designing UI Frameworks
+  Designing Patternsets
+
+The Design Gap
+  Beyond Tellerrand
+  Design in Code
+  Great Logistics Make Agile Teams
+
+Design Workflows
+  Wireframe -> Mockup -> HTML -> CSS -> JS
+  Wireframe -> HTML -> CSS -> JS
+  Spec -> HTML -> CSS -> JS
+  Spec -> Patternlab -> JS MV*
+  Spec -> Wireframe -> JS MV*
+  Spec -> Patternlab -> JS MV*
