@@ -3,7 +3,7 @@ Modern Web Fundamentals
   HTML/CSS/JS/DOM Elevator Pitch
 
 HTML5
-  Lesson 1: Markup
+  Lesson 1: Hypertext Markup
     HTML, Hypertext Markup Language is a notation standard used for websites.
 
     ## Engineer Vannevar Bush wrote "As We May Think" in 1945 in which he described the Memex, a theoretical proto-hypertext device which in turn helped inspire the subsequent invention of hypertext.
@@ -16,14 +16,14 @@ HTML5
     HTML combines both concepts, linked documents and annotated text. This is the fundamental of all websites as the exist today.
 
     What Do We Need This For?
-      Markup makes a document - to an extent - machine readable. A program can determine if a document contains certain annotations or a specific structure without interpreting the actual text. This way, machines can interpret and qualify content on an abstract level, without understanding its meaning.
+      Markup makes a document, to an extent, machine readable. A program can determine if a document contains certain annotations or a specific structure without interpreting the actual text. This way, machines can interpret and qualify content on an abstract level, without understanding its meaning.
       This has several important applications:
         - Search engines can deliver the requested content based on markup interpretation, not content, and do so quite successfully.
         - Content can be rendered to fit the environment, machine, system and application it is displayed on. This can make the same document or data readable on an incredible vast array of devices, from a wristwatch to a cellphone, a tablet, a laptop, a large home computer, smart tv or billboard.
         - Content described by markup can be accessible by devices that display it in a completely custom way, making it accessible to users with vision, hearing, movement impairments.
 
     HTML Markup
-      HTMl marks up the document with tags, set expressions inside < > lower-than and greater-than symbols. (This means you can NOT use < or > in HTML to express a mathmatical relationship, i.e. 5 > 1. You have to use a glyph, &gt; or &lt;)
+      HTMl marks up the document with tags, set expressions inside < > lower-than and greater-than symbols. (This means you can NOT use < or > in HTML to express a mathematical relationship, i.e. 5 > 1. You have to use a glyph, &gt; or &lt;)
       A HTML mark is called a TAG, and always consists of at least three parts: <, a name, and >.
       There are two kinds of tags:
         Placeholder tags, which consist of a single tag that is replaced by something it describes.
@@ -38,6 +38,28 @@ HTML5
         <i> /i>
         <a> </a>
         <img>
+
+    Nesting and Indentation
+      Tags can and should be nested within other tags, in fact, wrapping, nesting and placeholding are the fundamental concepts of markup text.
+      To make markup more easily readable, nested tags are written indented:
+
+      <html>
+        <head></head>
+        <body>
+          <section>
+            <article>
+              <h2></h2>
+              <img>
+              <p></p>
+            </article>
+            <article>
+              <h2></h2>
+              <img>
+              <p></p>
+            </article>
+          </section>
+        </body>
+      </html>
 
     HTML Hyperlinks
       A hyperlink connects two documents, leading from the one that displays the hyperlink to the one that is referenced in the hyperlink.
@@ -54,7 +76,10 @@ HTML5
         - Coda
         - Notepad++
         - Brackets
-        - ...
+        - Web-Editors
+          - codepen.io
+          - jsfiddle.
+          - jsbin.
 
       Document Structure
       Every HTML5 Document is split in three parts: Doctype Declaration, Header, Body.
@@ -69,17 +94,115 @@ HTML5
 
     Semantically correct markup means that for every piece of content, for every content structure there's the right, meaningful tag to use, making the content and its structure machine readable.
     Why is this so important?
-      - 
+      - The next person editing your document will understand its structure without reading the content
+      - Search engines will give your website higher rating because they understand your site's structure
+      - You will enjoy the much improved code readability
 
   Lesson 3: Attributes
+    Many tags support attributes. Attributes are qualifiers, if the tag describes what a piece of content is, the attribute describes how it is. It is possible and quite common to list more than one attribute and attribute value per tag. Notation is: Attributes and Attribute values respectively are separated by space.
+    Examples for attributes in tags are:
+    <a href="" title=""> </a>
+    <img src="" alt="">
+    <div class="class-name status-name" id="unique-name"> </div>
+    <input type="" placeholder="">
+    <video poster="" autoplay controls> </video>
+
+  Exercise 1: Turn this document into HTML
+  Exercise 2: Make this bad HTML document semantically correct
 
 CSS3
+  CSS, Cascading Style Sheets are a powerful and easy tool to describe how a website should look.They are typically stored in an external file, i.e. style.css.
+  CSS lives and thrives by overwriting its own definitions in a stack of general or very specific declarations, resulting in the right styling in the right place.
+  One of the impressive features of CSS is that with CSS most wrapping tags can be styled to behave like most other wrapping tags. This causes people to build entire websites using almost exclusively the div tag, and differentiating by classnames, only. Avoid that mistake!
+
+  CSS Locators and Definitions
+    CSS follows a simple and generic notation: locator { def:val; def:val; }
+    The locator can identify a single node or an array of nodes that match the locator's criteria.
+    A locator can be built around a tag name or a class/id attribute value, given to a tag or group of tags.
+    Notation is tag / tag.class / tag#id / .class / #id / .class#id / tag.class#id
+
+    A node that is given a class can be identified by using .class as an identifier, ids are notated as #id-name.
+    It is common to identify nodes by their parents, i.e. .parent .parent .class, a space representing the parent - sibling relationship between the former classname and the latter.
+    direct descendants can be notated as .node-1 > .node-2, meaning this css definition will only work if .node-1 is the direct parent of .node-2.
+    It is also possible to locate nodes by using more than one class attribute value per node, building AND-type conditions.
+
+    div.node-1 a.node-2.active locates the following html structure:
+
+    <div class="node-1">
+      <a class="node-2 active"></a>
+    </div>
+
   Identifying a Single Node
+    To locate a single DOM node (= tag), we have to first give that node a unique identifier; an id="" parameter in the html file. Then we can locate this single node in CSS by its parameter value:
+    <header id="main-menu"> can be identified as a unique and single node by using, among others, these notations:
+    #main-menu
+    nav#main-menu
+    body #main-menu
+    body nav#main-menu
+    body header #main-menu
+    body header nav#main-menu
+
+    The more elaborate examples may seem excessive, as the only necessary part of the ID-based locator is #main-menu, since there may only ever be one instance of it on the page.
+    However, this forces the renderer to iterate through all existing DOM nodes, finding that ID. Locating from the body upward is a little less expensive. If this makes ANY measurable difference today, is unclear.
+    .horizontal-nav
+    nav.horizontal-nav
+    body .horizontal-nav
+    body nav.horizontal-nav
+    body section .horizontal-nav
+    body section nav.horizontal-nav
+
   Identifying an Array of Nodes
+    Arrays of nodes may contain everything from a set of sibling items, to all .class or tag.class instances on a site. This is the most common type of locator. Note that this is also where most of the unsemantic HTML comes from: Many people build all or most of their markup from div tags, diversifying and differentiating between divs by classnames.
+
+  Collect Locators
+    Collect Locators are written as a comma separated list of locators, all referring to the same definition set { .. }.
+    Example:
+    a, p, aside, quot { }
+
   Pseudo-Locators
+    Pseudo-Locators allow for state or context based definitions, such as active, hover, focus, before, after, first and last.
+    a:hover
+    a:active
+    a:focus
+    div:before
+    div:after
+    ul li:first-child
+    ul li:last-child
+
   Preprocessors
-    SCSS
+    CSS lacks some handy features, such as variables, functions/mixins and includes. CSS also is DRY-agnostic, meaning writing CSS is painfully repetitive. Preprocessors are Extensions to CSS, that are compiled to CSS by a script or local compiler.
+
+    SASS/SCSS
+
     LESS
+
+Responsive Web Design
+  RWD describes best practices to build websites that can be properly displayed on a large range of devices.
+  Today, RWD is based on a few key functions:
+
+    Viewport Definition
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      This forces mobile browsers to render content as if the viewport had a size of 320x480px. Of course, natural resolution is retained, only element scaling is increased to match this theoretical resolution.
+
+    CSS Media Queries
+      Media queries are conditional statements (if-then) within CSS, that originally allowed the delivery of different CSS for different devices.
+      The media parameter first knew the following values:
+      - 
+
+      <link rel="stylesheet" media="(max-width: 800px)" href="example.css" />
+
+      <!-- CSS media query within a stylesheet -->
+      <style>
+      @media (max-width: 600px) {
+      .facet_sidebar {
+        display: none;
+      }
+      }
+      </style>
+
+
+
+
 JS
   Lesson 1: Variables, Conditions and Loops
   Lesson 1: DOM Node Manipulation
@@ -98,6 +221,8 @@ Frameworks, Libraries
     MV*
       Angular
       ReactJS
+
+A Word on Scaffolding
 
 Spec Driven Design
   What's a Spec?
