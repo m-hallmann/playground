@@ -1,0 +1,21 @@
+body#vis {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+#vis canvas#primary-canvas {
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  top:0;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
